@@ -47,8 +47,11 @@ ui:
   delete_all_files_button_enabled: true
 
 llm:
-  mode: llamacpp
-  prompt_style: "llama3"
+  provider: ollama
+  model: llama3
+embeddings:
+  provider: local
+  model: all-MiniLM-L6-v2
   # Should be matching the selected model
   max_new_tokens: 512
   context_window: 3900
