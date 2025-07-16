@@ -51,11 +51,17 @@ def _try_loading_included_file_formats() -> dict[str, type[BaseReader]]:
     return default_file_reader_cls
 
 
+from private_gpt.components.ingest.excel_reader import ExcelReader
+from private_gpt.components.ingest.google_sheet_reader import GoogleSheetReader
+
 # Patching the default file reader to support other file types
 FILE_READER_CLS = _try_loading_included_file_formats()
 FILE_READER_CLS.update(
     {
         ".json": JSONReader,
+        ".xlsx": ExcelReader,
+        ".xls": ExcelReader,
+        ".gsheet": GoogleSheetReader,
     }
 )
 

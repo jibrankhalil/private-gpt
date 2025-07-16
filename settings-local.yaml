@@ -18,7 +18,7 @@ embedding:
   mode: huggingface
 
 huggingface:
-  embedding_hf_model_name: nomic-ai/nomic-embed-text-v1.5
+  embedding_hf_model_name: "sentence-transformers/all-MiniLM-L6-v2"
 
 vectorstore:
   database: qdrant
