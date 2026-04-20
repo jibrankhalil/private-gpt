@@ -1,0 +1,30 @@
+# Copy this file to scripts/manpower_config.yaml and update the values.
+
+spreadsheet_id: "YOUR_SPREADSHEET_ID"
+credentials_json: "/absolute/path/to/google-service-account.json"
+header_row: 1
+
+tabs:
+  source: "RMD Drivers April 2026"
+  summary: "Daily Summary"
+  details: "Operations Daily"
+
+columns:
+  # Column where worker/driver name is stored
+  name: "B"
+  # User-provided requirement: vehicle class in column F
+  driver_type: "F"
+  # Status values such as OD, Idle, Sick, Vacation, Rig Site, etc.
+  status: "H"
+  # Where employee is working
+  location: "I"
+  # Optional team / operations group column
+  team: "J"
+
+status_aliases:
+  od: "OD"
+  on duty: "OD"
+  idle: "Idle"
+  sick: "Sick"
+  vacation: "Vacation"
+  rig site: "Rig Site"
